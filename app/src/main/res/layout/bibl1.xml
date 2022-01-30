@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bibl1Activity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="701dp"
+        android:layout_height="908dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.581"
+        app:srcCompat="@drawable/fonbibl1menu" />
+
+    <Button
+        android:id="@+id/java"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
+        android:text="Java"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cplus"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="256dp"
+        android:text="C++"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/python"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="508dp"
+        android:text="Python"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="251dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="116dp"
+        android:text="Java– объектно-ориентированный язык программирования, который используется для написания программного обеспечения, мобильных и веб-приложений."
+        android:textColor="#D8C9C9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="245dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="344dp"
+        android:text="C++ — компилируемый, статически типизированный язык программирования общего назначения, на котором можно создавать программы любого уровня сложности."
+        android:textColor="#D8C9C9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="216dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="580dp"
+        android:text="Python — это высокоуровневый язык программирования, который используется в различных сферах IT, таких как машинное обучение, разработка приложений, web, парсинг и другие."
+        android:textColor="#D8C9C9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

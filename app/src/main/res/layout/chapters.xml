@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C191D9E6">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="Обратно" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Первая программа на Java"
+                android:textSize="34sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="2047dp"
+                android:gravity="center|start"
+                android:text="\n    Для того чтобы увидеть результат программы, пусть даже самой простой, нужно:\n\n    1. Написать программу. Для этого нужно владеть языком программирования, причем знать не только синтаксис, но и возможности так называемых библиотек, уметь пользоваться текстовым редактором, при необходимости установить его, сохранить файл на диске;
+\n\n    2. Скомпилировать. Процессор понимает только машинные команды, поэтому нужно перевести текст программы в числовые коды. Это не всегда происходит сразу после написания кода. Во многих языках программирования окончательная компиляция происходит уже в процессе выполнения программы;
+\n\n    3. В случае, если программа разрабатывается для другого устройства, загрузить откомпилированный (или частично откомпилированный код) на устройство. Для этого нужно связаться с устройством, использовать протоколы передачи информации;
+\n\n    4. Запустить программу на выполнение.
+\n\n    Традиционно, первой программой является вывод в консоль 'Hello world!'. Рассмотрим код данной программы:
+\n\n      public class Program1 {\n
+             public static void main(String[] args) {\n
+                 System.out.println('Hello, world!');\n
+             }\n
+         }\n\n
+    Программа «Hello, world» на Java замечательна тем, что на ее примере можно обсудить многие особенности программирования на этом языке.
+    Все слова, кроме текста в кавычках, требуют осмысления. Прежде всего, программа на Java — это класс или несколько классов. Для простейшей программы достаточно одного класса, но он использует класс System , библиотечный, стандартный класс, который устанавливается вместе с компилятором Java.В языке Java невозможно создать просто глобальную функцию, она должна принадлежать какому-то классу. Обычно для этого создается объект класса и из него вызывается функция. При старте Java-программы JVM вызывает функцию с именем main() (имя зарезервировано, как и в С/C++) по имени класса без создания объекта. Для этого функция должна быть объявлена с модификатором static.
+Функция ничего не возвращает, только выполняет печать текста. Тип возвращаемого значения в этом случае — void.
+Функция main() принимает массив объектов класса String. Квадратные скобки для объявления массива можно в Java ставить и до, и после объявления типа. Строки, как и массивы, в Java тоже являются объектами.
+В строке вывода\n\n
+    System.out.println(«Hello, world!»);\n\n
+печать осуществляется посредством вызова функции println() статического объекта класса System с именем out класса PrintStream. Для вывода у PrintStream две функции: print() и println(). Вторая после вывода переводит курсор на новую строку.
+Имена классов и интерфейсов (о них мы поговорим позднее) принято начинать с заглавной буквы, объектов и данных примитивных типов — с малой.
+"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
