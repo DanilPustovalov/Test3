@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class JavaActivity extends AppCompatActivity implements View.OnClickListener{
-    final int NumCh=1;
+    final int NumCh=2;
     TextView[] chapters= new TextView[NumCh];
     TextView[] tasks= new TextView[NumCh];
     @Override
