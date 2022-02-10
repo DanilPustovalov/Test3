@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class FragmentTask2 extends Fragment implements View.OnClickListener {
     public FragmentTask2() {
@@ -15,8 +17,10 @@ public class FragmentTask2 extends Fragment implements View.OnClickListener {
     int count;
     public void onViewCreated(View v, Bundle savedInstanceState){
         super.onViewCreated(v, savedInstanceState);
-        Intent intent =getIntent();
-        count=intent.getIntExtra("count");
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            count = bundle.getInt("key");
+        }
         Button rightanswer=v.findViewById(R.id.RigthAnswer);
         Button answ2=v.findViewById(R.id.answer2);
         Button answ3=v.findViewById(R.id.answer3);
@@ -27,12 +31,17 @@ public class FragmentTask2 extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view){
-        Intent intent=new Intent(getActivity().getApplication(), ResultOfTasks.class);
-        EditText text1 =view.findViewById(R.id.editTextAnswer);
+        ResultOfTasks yfc = new ResultOfTasks();
+        Bundle bundle = new Bundle();
         if(view.getId()==R.id.RigthAnswer){
             count++;
         }
-        intent.putExtra("countF",count);
-        startActivity(intent);
+        bundle.putInt("key", count);
+        yfc.setArguments(bundle);
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.task2, yfc);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

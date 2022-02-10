@@ -4,17 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JavaActivity">
+    android:background="@drawable/javafon"
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="596dp"
-        android:layout_height="894dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/javafon" />
+    tools:context=".JavaActivity">
 
     <TextView
         android:id="@+id/textView7"
@@ -31,10 +23,11 @@
 
     <TextView
         android:id="@+id/a1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="72dp"
+        android:scaleType="fitXY"
         android:text="1. Здравствуй мир!"
         android:textColor="#F1EBEB"
         android:textSize="20sp"
@@ -70,12 +63,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="461dp"
-        android:layout_marginBottom="243dp"
+        android:layout_marginTop="456dp"
         android:text="Блок 1"
         android:textColor="#F1EBEB"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -8,14 +8,17 @@ import android.view.View;
 import android.widget.Button;
 
 public class Bibl1Activity extends AppCompatActivity implements View.OnClickListener{
-    Button java=findViewById(R.id.java);
-    Button cplus=findViewById(R.id.cplus);
-    Button python=findViewById(R.id.python);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bibl1);
+        Button java=findViewById(R.id.java);
+        Button cplus=findViewById(R.id.cplus);
+        Button python=findViewById(R.id.python);
         java.setOnClickListener(this);
+        cplus.setOnClickListener(this);
+        python.setOnClickListener(this);
     }
 
     @Override

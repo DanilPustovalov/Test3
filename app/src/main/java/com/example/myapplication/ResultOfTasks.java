@@ -20,9 +20,11 @@ import android.widget.TextView;
     @Override
     public void onViewCreated(View v, Bundle savedInstanceState){
         super.onViewCreated(v, savedInstanceState);
-        Intent intent =getIntent();
-        count=intent.getIntExtra("count");
-        Button button1=v.findViewById(R.id.RigthAnswer);
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            count = bundle.getInt("key");
+        }
+        Button button1=v.findViewById(R.id.back_j);
         button1.setOnClickListener(this);
         TextView textView=v.findViewById(R.id.res);
         textView.setText("Вы ответили правильно на "+count+" из 2");
@@ -38,5 +40,6 @@ import android.widget.TextView;
             e.printStackTrace();
         }
         startActivity(intent);
+        
     }
 }

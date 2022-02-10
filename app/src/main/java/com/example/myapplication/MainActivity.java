@@ -8,11 +8,12 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    Button bibl=findViewById(R.id.bibl);
+    Button bibl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        bibl=findViewById(R.id.bibl);
         bibl.setOnClickListener(this);
     }
 

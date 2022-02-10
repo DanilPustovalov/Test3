@@ -7,26 +7,34 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class FragmentTask extends Fragment implements View.OnClickListener{
     public FragmentTask() {
         super(R.layout.tasks);
     }
+    EditText text1;
     public void onViewCreated(View v, Bundle savedInstanceState){
         super.onViewCreated(v, savedInstanceState);
         Button next=v.findViewById(R.id.Next);
+        text1 =v.findViewById(R.id.editTextAnswer);
         next.setOnClickListener(this);
     }
-
+        int count=0;
         @Override
         public void onClick(View view){
-            Intent intent=new Intent(getActivity().getApplication(), FragmentTask2.class);
-            EditText text1 =view.findViewById(R.id.editTextAnswer);
-            int count=0;
+            FragmentTask2 yfc = new FragmentTask2();
+            Bundle bundle = new Bundle();
             if(text1.getText().toString()=="Hello, Earth"){
                 count++;
             }
-            intent.putExtra("count",count);
-            startActivity(intent);
+            bundle.putInt("key", count);
+            yfc.setArguments(bundle);
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.task, yfc);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
         }
     }

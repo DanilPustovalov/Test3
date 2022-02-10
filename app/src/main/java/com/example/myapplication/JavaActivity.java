@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class JavaActivity extends AppCompatActivity implements View.OnClickListener{
-    final int NumCh=1;
+    final int NumCh=2;
     TextView[] chapters= new TextView[NumCh];
     TextView[] tasks= new TextView[NumCh];
     @Override
@@ -24,15 +24,17 @@ public class JavaActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v.getId()==R.id.a1){
-            Intent intent=new Intent(this,FragmentChap.class);
+           getSupportFragmentManager().beginTransaction()
+                    .add(android.R.id.content, new FragmentChap()).commit();
+
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            startActivity(intent);
         }else{
-
+            getSupportFragmentManager().beginTransaction()
+                    .add(android.R.id.content, new FragmentTask()).commit();
         }
     }
 }
